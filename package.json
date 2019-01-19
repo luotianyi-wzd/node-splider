@@ -1,0 +1,24 @@
+{
+  "name": "node-p",
+  "version": "1.0.0",
+  "description": "",
+  "main": "api/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "async": "^2.6.1",
+    "cheerio": "^1.0.0-rc.2",
+    "request": "^2.88.0",
+    "superagent": "^4.1.0"
+  },
+  "dependencies": {
+    "eventproxy": "^1.0.0",
+    "express": "^4.16.4",
+    "iconv-lite": "^0.4.24",
+    "mysql": "^2.16.0"
+  }
+}
