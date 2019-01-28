@@ -16,6 +16,7 @@
     "superagent": "^4.1.0"
   },
   "dependencies": {
+    "crypto": "^1.0.1",
     "eventproxy": "^1.0.0",
     "express": "^4.16.4",
     "iconv-lite": "^0.4.24",

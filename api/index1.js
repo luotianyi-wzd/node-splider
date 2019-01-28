@@ -9,7 +9,7 @@ const config = require('./../config/config')
 let list = []
 let time
 //拼接链接
-for (let i = 1; i < 5; i++) {
+for (let i = 1; i < 2; i++) {
     if (i == 1) {
         newUrl = 'https://cnodejs.org'
     } else {
@@ -22,7 +22,7 @@ var pool = mysql.createPool(config.mysql)
 //sql语句
 var addSql = 'insert into bolg(title, author, href) values ?'
 //数据库
-var query = function(sql, params, callback) {
+var query = function (sql, params, callback) {
     pool.getConnection(function (err, connection) {
         connection.query(sql, params, function (err, request) {
             if (err) {
@@ -46,7 +46,7 @@ async.mapSeries(urlArr, function (item, callback) {
     console.log(result[0])
     console.log('共' + result[0].length + '个')
     //获取文章详情
-    async.mapLimit(result[0], 10 , function (item, callback) {
+    async.mapLimit(result[0], 10, function (item, callback) {
         currentCount++
         time = new Date().getTime()
         request({url: item.href}, (err, res) => {
